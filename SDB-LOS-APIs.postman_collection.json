@@ -1,0 +1,671 @@
+{
+	"info": {
+		"_postman_id": "b70337a6-3784-4dff-a478-009872ab55e3",
+		"name": "SDB-LOS-APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15854830",
+		"_collection_link": "https://dark-spaceship-115286.postman.co/workspace/SAT~42f68810-4a3d-4e9c-a94a-21aaa445ac72/collection/15854830-b70337a6-3784-4dff-a478-009872ab55e3?action=share&source=collection_link&creator=15854830"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": []
+		},
+		{
+			"name": "Backlist Check",
+			"item": [
+				{
+					"name": "Backlist Check by NIC",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"TOKEN\": \"test\",\r\n    \"USERID\": \"test\",\r\n    \"NICNO\": \"437792313V\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/LosBlacklistCheck",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"LosBlacklistCheck"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"TOKEN\": \"test\",\r\n    \"USERID\": \"test\",\r\n    \"NICNO\": \"437792313V\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASEURL}}/LosBlacklistCheck",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"LosBlacklistCheck"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.22.1"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Dec 2025 06:28:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "471"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"BlacklistDetails\": {\n        \"Status\": \"OK\",\n        \"SuccessMessage\": \"Fetched Successfully\",\n        \"Blacklist\": [\n            {\n                \"Name\": \"Mr.Y.Serasinghe\",\n                \"NICNo1\": \"437792313V\",\n                \"NICNo2\": \"437792313V\",\n                \"DOB\": \"\",\n                \"PassportNo\": \"\",\n                \"BusinessName\": \"Mr.Y.Serasinghe\",\n                \"BusinessRegNo\": \"437792313V\",\n                \"CityofBusiness\": \"\"\n            }\n        ],\n        \"Teroristlist\": {\n            \"Status\": \"OK\",\n            \"SuccessMessage\": \"No Records Found\",\n            \"TL\": {\n                \"Name\": \"\",\n                \"NICNo1\": \"\",\n                \"NICNo2\": \"\",\n                \"DOB\": \"\",\n                \"PassportNo\": \"\",\n                \"BusinessName\": \"\",\n                \"BusinessRegNo\": \"\",\n                \"CityofBusiness\": \"\",\n                \"Details\": \"\"\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Backlist Check by Short name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"TOKEN\": \"test\",\r\n    \"USERID\": \"test\",\r\n    \"NAME\": \"MOHAMAD\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/LosBlacklistCheck",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"LosBlacklistCheck"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Related Party Check",
+			"item": [
+				{
+					"name": "Related Party Check by NIC",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"TOKEN\": \"test\",\r\n    \"USERID\": \"test\",\r\n    \"NICNO\": \"697640355V\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/LosRelatedParty",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"LosRelatedParty"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Related Party Check by Short name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"TOKEN\": \"test\",\r\n    \"USERID\": \"test\",\r\n    \"NAME\": \"YAPA\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/LosRelatedParty",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"LosRelatedParty"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Fetch Customer",
+			"item": [
+				{
+					"name": "Fetch customer by CIF",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"TOKEN\": \"test\",\r\n    \"USERID\": \"test\",\r\n    \"TYPE\": \"ICBS\",\r\n    \"PARA\": \"BASIC\",\r\n    \"CIFNO\": \"292\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/LosCustomerSearch",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"LosCustomerSearch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch customer by NIC",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"TOKEN\": \"test\",\r\n    \"USERID\": \"test\",\r\n    \"TYPE\": \"ICBS\",\r\n    \"PARA\": \"BASIC\",\r\n    \"NICNO\": \"198003600404\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/LosCustomerSearch",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"LosCustomerSearch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch customer by Name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"TOKEN\": \"test\",\r\n    \"USERID\": \"test\",\r\n    \"TYPE\": \"ICBS\",\r\n    \"PARA\": \"BASIC\",\r\n    \"SHORTNAME\": \"MAHENDRA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/LosCustomerSearch",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"LosCustomerSearch"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Fetch Core Data",
+			"item": [
+				{
+					"name": "Get Core data by CIF",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"TOKEN\": \"test\",\r\n    \"USERID\": \"test\",\r\n    \"TYPE\": \"ICBS\",\r\n    \"PARA\": \"BASIC\",\r\n    \"CIFNO\":\"292\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/LosCustomerSearch",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"LosCustomerSearch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Core data by CIF and Loan type",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/LosCustomerSearchByAccountNumber",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"LosCustomerSearchByAccountNumber"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sync Master Data",
+			"item": [
+				{
+					"name": "Sync Master data - Products (CFP503)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Table_name\": \"CFP50301\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL_TBL}}/sinc_table/v1/sinc_table",
+							"host": [
+								"{{BASEURL_TBL}}"
+							],
+							"path": [
+								"sinc_table",
+								"v1",
+								"sinc_table"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sync Master data - Rates",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Table_name\": \"CFP50301\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/sinc_table",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"sinc_table"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sync Master data - CFP504",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Table_name\": \"CFP50401\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/sinc_table",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"sinc_table"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sync Master data - CFP601",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Table_name\": \"CFP60101\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/sinc_table",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"sinc_table"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sync Master data - FRP00501",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Table_name\": \"FRP00501\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/sinc_table",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"sinc_table"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sync Master data - LNP011",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Table_name\": \"LNP011SQ\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/sinc_table",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"sinc_table"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sync Master data - PWNKAR00",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Table_name\": \"PWNKAR00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/sinc_table",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"sinc_table"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASEURL",
+			"value": ""
+		},
+		{
+			"key": "BASEURL_TBL",
+			"value": ""
+		}
+	]
+}
